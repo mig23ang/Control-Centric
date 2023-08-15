@@ -1,0 +1,33 @@
+{
+  "name": "asesores-de-negocio-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/asesores-de-negocio-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/asesores-de-negocio-e2e/cypress.config.ts",
+        "devServerTarget": "asesores-de-negocio:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "asesores-de-negocio:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "asesores-de-negocio:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/asesores-de-negocio-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["asesores-de-negocio"]
+}

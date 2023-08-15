@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@control-centric/common-ui": ["libs/common-ui/src/index.ts"],
+      "@control-centric/data-credito-preselecta": [
+        "libs/data-credito-preselecta/src/index.ts"
+      ],
+      "@control-centric/hge": ["libs/hge/src/index.ts"],
+      "@control-centric/ics": ["libs/ics/src/index.ts"],
+      "@control-centric/jarvis": ["libs/jarvis/src/index.ts"],
+      "@control-centric/on-base-mobile": ["libs/on-base-mobile/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
