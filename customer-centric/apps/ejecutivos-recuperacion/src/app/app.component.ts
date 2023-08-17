@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { exampleClientes } from '@customer-centric/jarvis';
 
 @Component({
   selector: 'customer-centric-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ejecutivos-recuperacion';
+  clientes = exampleClientes;
 }
