@@ -2,7 +2,7 @@
   "name": "asesores-pyme",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "control-centric",
+  "prefix": "customer-centric",
   "sourceRoot": "apps/asesores-pyme/src",
   "tags": [],
   "targets": {

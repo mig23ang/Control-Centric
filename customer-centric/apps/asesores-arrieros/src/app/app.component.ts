@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent],
-  selector: 'control-centric-root',
+  selector: 'customer-centric-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

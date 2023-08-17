@@ -2,7 +2,7 @@
   "name": "asesores-arrieros",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "control-centric",
+  "prefix": "customer-centric",
   "sourceRoot": "apps/asesores-arrieros/src",
   "tags": [],
   "targets": {
