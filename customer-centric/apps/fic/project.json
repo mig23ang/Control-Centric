@@ -8,16 +8,30 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/fic",
         "index": "apps/fic/src/index.html",
         "main": "apps/fic/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/fic/tsconfig.app.json",
-        "assets": ["apps/fic/src/favicon.ico", "apps/fic/src/assets"],
-        "styles": ["apps/fic/src/styles.scss"],
-        "scripts": []
+        "assets": [
+          "apps/fic/src/favicon.ico",
+          "apps/fic/src/assets"
+        ],
+        "styles": [
+          "apps/fic/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.css"
+        ],
+        "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/@popperjs/core/dist/umd/popper.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
       },
       "configurations": {
         "production": {
@@ -66,14 +80,21 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/fic/**/*.ts", "apps/fic/**/*.html"]
+        "lintFilePatterns": [
+          "apps/fic/**/*.ts",
+          "apps/fic/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/fic/jest.config.ts",
         "passWithNoTests": true

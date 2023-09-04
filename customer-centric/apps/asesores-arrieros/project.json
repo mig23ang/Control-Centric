@@ -8,19 +8,30 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/asesores-arrieros",
         "index": "apps/asesores-arrieros/src/index.html",
         "main": "apps/asesores-arrieros/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/asesores-arrieros/tsconfig.app.json",
         "assets": [
           "apps/asesores-arrieros/src/favicon.ico",
           "apps/asesores-arrieros/src/assets"
         ],
-        "styles": ["apps/asesores-arrieros/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "apps/asesores-arrieros/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.css"
+        ],
+        "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/@popperjs/core/dist/umd/popper.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
       },
       "configurations": {
         "production": {
@@ -69,7 +80,9 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "apps/asesores-arrieros/**/*.ts",
@@ -79,7 +92,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/asesores-arrieros/jest.config.ts",
         "passWithNoTests": true

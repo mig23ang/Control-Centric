@@ -8,19 +8,30 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/asesores-negocios",
         "index": "apps/asesores-negocios/src/index.html",
         "main": "apps/asesores-negocios/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/asesores-negocios/tsconfig.app.json",
         "assets": [
           "apps/asesores-negocios/src/favicon.ico",
           "apps/asesores-negocios/src/assets"
         ],
-        "styles": ["apps/asesores-negocios/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "apps/asesores-negocios/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.css"
+        ],
+        "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/@popperjs/core/dist/umd/popper.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
       },
       "configurations": {
         "production": {
@@ -69,7 +80,9 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "apps/asesores-negocios/**/*.ts",
@@ -79,7 +92,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/asesores-negocios/jest.config.ts",
         "passWithNoTests": true
