@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
+  @Input() isPrimary = false;
 
-  @Input() titulo = " ";
+  @Input() isSecondary = false;
 
+  @Input() texto = 'Texto del botón';
 }
