@@ -1,4 +1,9 @@
+<customer-centric-navbar />
 
-<ul>
-  <li *ngFor="let cliente of clientes">{{cliente.id}} + {{ cliente.name }} </li>
-</ul>
+<router-outlet>
+  <customer-centric-button />
+  <customer-centric-button />
+  <ul>
+    <li *ngFor="let cliente of clientes">{{cliente.id}} + {{ cliente.name }} </li>
+  </ul>
+</router-outlet>
