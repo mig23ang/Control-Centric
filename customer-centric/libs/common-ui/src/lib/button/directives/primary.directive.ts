@@ -13,7 +13,6 @@ export class PrimaryDirective implements OnInit {
   }
 
   setColor() {
-    this.el.nativeElement.style.backgroundColor = 'blue';
-    this.el.nativeElement.style.color = 'white';
+    console.log("first")
   }
 }

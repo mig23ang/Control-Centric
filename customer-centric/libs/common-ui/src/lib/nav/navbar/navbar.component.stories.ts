@@ -1,13 +1,31 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { moduleMetadata, type Meta, type StoryFn } from '@storybook/angular';
 import { NavbarComponent } from './navbar.component';
+import { CommonUiModule } from '../../common-ui.module';
 
-const meta: Meta<NavbarComponent> = {
+export default {
   component: NavbarComponent,
   title: 'NavbarComponent',
-};
-export default meta;
-type Story = StoryObj<NavbarComponent>;
+  tags: ['autodocs'],
+  decorators: [
+    moduleMetadata({
+      //declarations: [PrimaryDirective],
+      imports: [CommonUiModule],
+    }),
+  ],
+  argTypes: {
+    customText: {
+      control: 'text',
+      defaultValue: 'texto del botón',
+      description: 'texto del botón',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'texto del botón' },
+      },
+    },
+  },
+} as Meta;
 
-export const Primary: Story = {
-  args: {},
-};
+const Template: StoryFn = (args: any) => ({ props: args });
+
+export const CustomText: StoryFn = Template.bind({});
+CustomText.args = { texto: 'Texto por defecto' };
