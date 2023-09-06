@@ -4,7 +4,7 @@ export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'fic',
+    redirectTo: 'arrieros',
   },
   {
     path: 'fic',
