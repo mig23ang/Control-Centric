@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@customer-centric/common-ui": ["libs/common-ui/src/index.ts"],
-      "@customer-centric/jarvis": ["libs/services/src/lib/jarvis/jarvis.ts"]
+      "@customer-centric/jarvis": ["libs/services/src/lib/jarvis/jarvis.ts"],
+      "@customer-centric/not-found": ["libs/not-found/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
