@@ -1,2 +1,12 @@
-<control-centric-nx-welcome></control-centric-nx-welcome>
-<router-outlet></router-outlet>
+<customer-centric-navbar />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <customer-centric-menu-lateral />
+    </div>
+    <div class="col-10 contenido-central">
+      <router-outlet />
+    </div>
+  </div>
+</div>
+<customer-centric-footer />

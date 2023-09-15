@@ -1,0 +1,32 @@
+@import "../../../../../../theme/utils/_theme.scss";
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-awesome{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  &.left{
+    padding-right: 8px;
+  }
+  &.right{
+    padding-left: 8px;
+  }
+}
+
+.mib-button {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 6px 8px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}

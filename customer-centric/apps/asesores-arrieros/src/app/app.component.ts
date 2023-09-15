@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
-
+import { exampleClientes } from '@customer-centric/jarvis';
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent],
-  selector: 'control-centric-root',
+  selector: 'customer-centric-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'asesores-arrieros';
+  clientes = exampleClientes;
 }
