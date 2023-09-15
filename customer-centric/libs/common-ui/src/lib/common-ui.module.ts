@@ -6,6 +6,7 @@ import { PrimaryDirective } from './button/directives/primary.directive';
 import { FooterComponent } from './nav/footer/footer.component';
 import { NavbarDirective } from './nav/navbar/directives/navbar.directive';
 import { FooterDirective } from './nav/footer/directives/footer.directive';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -16,7 +17,13 @@ import { FooterDirective } from './nav/footer/directives/footer.directive';
     FooterComponent,
     FooterDirective,
     NavbarDirective,
+    MenuLateralComponent,
   ],
-  exports: [ButtonComponent, NavbarComponent, FooterComponent],
+  exports: [
+    ButtonComponent,
+    NavbarComponent,
+    FooterComponent,
+    MenuLateralComponent,
+  ],
 })
 export class CommonUiModule {}
