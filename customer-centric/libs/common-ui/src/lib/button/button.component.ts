@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IButton } from './button.interface';
 
 @Component({
   selector: 'customer-centric-button',
@@ -6,9 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() isPrimary = false;
+  @Output() libClick = new EventEmitter();
+  @Input() custom: IButton = {
+    color: 'primary',
+    label: 'ButtonDefault',
+  };
 
-  @Input() isSecondary = false;
-
-  @Input() texto = 'Texto del botón';
+  sendEvent(): void {
+    this.libClick.emit(' ');
+  }
 }

@@ -1,0 +1,605 @@
+@import './_default';
+@import './_variables';
+@import './colors';
+
+// ==========================================================================
+// Atomo Button Theme
+// ==========================================================================
+.atom-button {
+    min-width: 120px;
+    height: 36px;
+    font-family: $fontFamilyBrand;
+    color: map-get(map-get($colors,primary),base);
+
+    &.primary{
+      background: map-get(map-get($colors,secondary),base);
+    }
+    &.secondary{
+      background: map-get(map-get($colors,grayscale),white);
+      border: 1px solid map-get(map-get($colors,secondary),base);
+    }
+    &.tertiary{
+      background: none;
+      text-decoration: underline;
+      box-shadow: none;
+      color: map-get(map-get($colors,primary),dark);
+      min-width:unset;
+      padding: 0px;
+      height: auto;
+    }
+    &.modal{
+       min-width: 181px;
+    }
+    &.secuencial{
+      width: 152px;
+    }
+  }
+
+  // .atom-button__primary
+  // {
+  //   background: map-get(map-get($colors,secondary),base);
+  // }
+
+  .atom-button:disabled{
+    background-color: map-get(map-get($colors,grayscale),gray-5);
+    color: map-get(map-get($colors,grayscale),gray-3);
+    box-shadow: none;
+    &.secondary{
+      background-color: transparent;
+      border: 1px solid map-get(map-get($colors,grayscale),gray-4);
+    }
+    &.tertiary{
+      background-color: transparent;
+    }
+  }
+
+  .atom-button:active{
+    &.primary{
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.16);
+    }
+    &.secondary{
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.16);
+    }
+    // box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.16);
+    &.tertiary{
+      color: map-get(map-get($colors,primary),base);
+      box-shadow: none;
+    }
+  }
+
+// ==========================================================================
+// Atomo Button plus Theme
+// ==========================================================================
+.btn-plus {
+  background-color: map-get(map-get($colors,secondary),base);
+  box-shadow: 1px 4px 4px rgb(51, 51, 51, 0.04) !important;
+}
+
+
+.btn-plus__text {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.btn-plus__text-visible {
+  color: map-get(map-get($colors,primary),base) !important;
+}
+
+.btn-plus__img {
+  background: map-get(map-get($colors,grayscale),white);
+  color: map-get(map-get($colors,primary),base);
+}
+
+// ==========================================================================
+// Atomo Header theme
+// ==========================================================================
+
+.color-alert{
+    width: 10px;
+    height: 10px;
+    color: map-get(map-get($colors,alerts),error);
+    }
+.color-icon{
+    color: map-get(map-get($colors,primary),base);
+    }
+
+// ==========================================================================
+// Atomo CheckBox
+// ==========================================================================
+
+.label-checkbox {
+  color: $grayscaleLevel-5 ;
+  font-family: $fontFamilyBrand;
+  font-size: 14px;
+  &.required{
+    color: map-get(map-get($colors,alerts),error);
+  }
+}
+
+.texlink-checkbox {
+  color:map-get(map-get($colors,primary),base);
+  &.required{
+    color: map-get(map-get($colors,alerts),error);
+  }
+}
+
+.check{
+  --background-checked:#016D38;
+  --border-color: #016D38;
+  --border-color-checked: #016D38;
+  --background: white;
+  width: 20px;
+  height: 20px;
+  &.required{
+    --border-color: #DC3545;
+  }
+  &.disabled{
+    --border-color: black;
+  }
+}
+
+
+// ==========================================================================
+// Atomo Cards Theme
+// ==========================================================================
+
+.item-label {
+  color: map-get(map-get($colors,grayscale),gray-1);;
+  font-family: $fontFamilyBrand;
+  font-size: 14px;
+}
+
+.cards_container{
+  max-height: 40vh;
+  overflow: auto;
+}
+
+// ==========================================================================
+// Atomo Calendario Theme
+// ==========================================================================
+
+
+.atom-datetime-icon{
+  font-size: 24px;
+  color: map-get(map-get($colors,primary),base);
+  padding-right: 10px;
+}
+
+.atom-input-date-picker {
+
+  .atom-date-picker-angular {
+    background-color: map-get(map-get($colors,grayscale),white);
+  }
+  .myDpSelector {
+    font-family: $fontFamilyBrand  !important;
+    background: map-get(map-get($colors,grayscale),white);
+
+    .myDpSelectorArrow:before {
+      border-bottom-color: #ededed;
+    }
+
+    .myDpDaycell,
+    .myDpMonthLabel,
+    .myDpMonthcell,
+    .myDpYearLabel,
+    .myDpYearcell,
+    .myDpWeekDayTitle,
+    .myDpDayValue {
+      font-family: $fontFamilyBrand  !important;
+      font-size: 14px !important;
+    }
+
+    .myDpTableSingleDay:hover,
+    .myDpTableSingleMonth:hover,
+    .myDpTableSingleYear:hover {
+      background-color: transparent;
+    }
+
+    .myDpTableSingleDay:active,
+    .myDpTableSingleMonth:active,
+    .myDpTableSingleYear:active {
+      background-color: map-get(map-get($colors,secondary),base);
+    }
+
+    .myDpMonthLabel,
+    .myDpYearLabel {
+      color: #000;
+    }
+
+    .myDpHighlight {
+      color: #333;
+    }
+
+    .myDpWeekDayTitle {
+      font-weight: bold;
+    }
+
+    .myDpSelectedDay,
+    .myDpSelectedDay:hover {
+      background-color:  map-get(map-get($colors,secondary),base);
+      border-radius: 4px;
+    }
+
+
+    .myDpMarkCurrMonth,
+    .myDpMonthValue {
+      font-family: $fontFamilyBrand  !important;
+      border-bottom: none;
+    }
+
+    .myDpSelectedMonth {
+      background: transparent;
+
+      .myDpMonthValue {
+        background: map-get(map-get($colors,secondary),base);
+      }
+    }
+
+    .myDpMarkCurrDay,
+    .myDpMarkCurrMonth,
+    .myDpMarkCurrYear {
+      border-bottom: transparent;
+    }
+
+    .myDpYearValue {
+      font-family: $fontFamilyBrand  !important;
+    }
+
+    .myDpSelectedYear {
+      background: transparent;
+
+      .myDpYearValue {
+        background:  map-get(map-get($colors,secondary),base);
+      }
+    }
+
+    .myDpRangeColor {
+      background-color: #FFF2C9;
+    }
+
+    .myDpRangeBegin {
+      background: map-get(map-get($colors,secondary),base);
+    }
+
+    .myDpRangeEnd {
+      background: map-get(map-get($colors,secondary),base);
+    }
+
+    .myDpIconRightArrow:before, .myDpIconLeftArrow:before {
+      font-size: 28px;
+      font-family: $fontFamilyBrand ;
+      position: absolute;
+      top: 13px;
+      color: map-get(map-get($colors,primary),base);
+    }
+  }
+
+}
+
+// ==========================================================================
+// Molecula Modal Theme
+// ==========================================================================
+
+.icono{
+    width: 60px;
+    height: 60px;
+}
+.title-modal{
+    font-family: $fontFamilyBrand;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: map-get(map-get($colors,grayscale),black);
+}
+.body{
+    font-family: $fontFamilyBrand;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: map-get(map-get($colors,grayscale),gray-1);
+}
+
+
+// ==========================================================================
+// Molecula Card Theme
+// ==========================================================================
+
+.molcard-grid-card{
+  background: map-get(map-get($colors,grayscale),white);
+}
+
+.molcard-img-blog{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.molcard-title-card, .molcard-label, .molcard-desc, .molcard-caption, .molcard-chip{
+  font-family: $fontFamilyBrand ;
+  font-style: normal;
+}
+
+.molcard-title-card{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: map-get(map-get($colors,primary),base);
+  margin-bottom: 8px;
+  &.shortTitle{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical};
+
+}
+
+.molcard-label{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+  color: map-get(map-get($colors,grayscale),gray-2);
+  padding-bottom: 8px;
+}
+
+.molcard-desc{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: map-get(map-get($colors,grayscale),black);
+  margin-bottom: 8px;
+  &.shortLabel2{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical};
+}
+
+.molcard-caption{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: map-get(map-get($colors,grayscale),gray-2);
+}
+
+
+
+.molcard-icon-card{
+  position:absolute;
+  font-size: 20px;
+  color: map-get(map-get($colors,primary),base);
+  background: map-get(map-get($colors,grayscale),gray-5);
+  border-radius: 16px;
+  padding: 5px;
+  right: 10px;
+    &.top{
+      top: 10px;
+    }
+    &.base{
+      bottom: 10px;
+    }
+}
+
+// ==========================================================================
+// breadcrumb Theme
+// ==========================================================================
+.breadCrumb-change{
+  border-left: 2px solid map-get(map-get($colors,primary),base);
+  color: map-get(map-get($colors,grayscale),black);
+  font-size: 1rem;
+  padding: 0px 8px;
+  &.hogar{
+    border-left: 2px solid map-get(map-get($colors,hogar),dark);
+  }
+  &.movilidad{
+    border-left: 2px solid map-get(map-get($colors,movilidad),dark);
+  }
+  &.bienestar{
+    border-left: 2px solid map-get(map-get($colors,bienestar),dark);
+  }
+}
+.ico-arrow-left{
+  color: map-get(map-get($colors,primary),base);
+  font-style: normal;
+  font-size: 1rem;
+  }
+.icon-breadcrumb{
+  color: map-get(map-get($colors,primary),base);
+}
+
+// ==========================================================================
+// section-heading Theme
+// ==========================================================================
+.title-Section-Heading {
+  border-left: 2px solid map-get(map-get($colors,primary),base);
+  color: map-get(map-get($colors,grayscale),black);
+  font-size: 1rem;
+  &.hogar{
+    border-left: 2px solid map-get(map-get($colors,hogar),dark);
+  }
+  &.Movilidad{
+    border-left: 2px solid map-get(map-get($colors,movilidad),dark);
+  }
+  &.bienestar{
+    border-left: 2px solid map-get(map-get($colors,bienestar),dark);
+  }
+}
+.icon-section-heading{
+  color: map-get(map-get($colors,primary),base);
+}
+
+// ==========================================================================
+// tab-menu theme
+// ==========================================================================
+
+.tab-selected {
+
+  color: map-get(map-get($colors,primary),base) !important;
+  font-size: 10px;
+  font-weight: bold;
+  &.hogar{
+    color:#016D38 !important;
+  }
+}
+.icon-insurances{
+
+  width: 19.5px;
+  height: 19.5px;
+  transition: 0.3s ease;
+  &.hogar{
+    color:#fb2727 !important;
+  }
+}
+// ==========================================================================
+// leimotive theme
+// ==========================================================================
+
+.dark-color{
+  &.hogar{
+    stop-color: map-get(map-get($colors,hogar),dark);
+  }
+  &.movilidad{
+    stop-color: map-get(map-get($colors,movilidad),dark);
+  }
+  &.bienestar{
+    stop-color: map-get(map-get($colors,bienestar),dark);
+  }
+
+}
+.medium-color{
+  &.hogar{
+    stop-color: map-get(map-get($colors,hogar),medium);
+  }
+  &.movilidad{
+    stop-color:  map-get(map-get($colors,movilidad),medium);
+  }
+  &.bienestar{
+    stop-color:  map-get(map-get($colors,bienestar),medium);
+  }
+
+}
+.light-color{
+  &.hogar{
+    stop-color:  map-get(map-get($colors,hogar),light);
+  }
+  &.movilidad{
+    stop-color:  map-get(map-get($colors,movilidad),light);
+  }
+  &.bienestar{
+    stop-color:  map-get(map-get($colors,bienestar),light);
+  }
+}
+
+
+// ==========================================================================
+// input-text theme
+// ==========================================================================
+
+.icon-input{
+  color: map-get(map-get($colors,primary),base);
+  }
+
+  .red-border-class {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.16);
+    min-height: 46px;
+  }
+
+// ==========================================================================
+// dropdown theme
+// ==========================================================================
+
+.item-list {
+  .icon-search {
+    color:map-get(map-get($colors,primary),base);
+    font-size: 16px;
+    display: flex;
+    align-self: center;
+  }
+}
+
+// ==========================================================================
+// atom-tag theme
+// ==========================================================================
+
+  .atom-tag{
+    font-family: $fontFamilyBrand ;
+    font-style: normal;
+
+    &.large{
+        height: 24px;
+        font-size: 14px;
+    }
+    &.small{
+        height: 20px;
+        font-size: 12px;
+    }
+    &.primary{
+        color:#333333;
+        background: map-get(map-get($colors,secondary),base);
+    }
+    &.secondary{
+        color:#FFFFFF;
+        background: #009056;
+    }
+    &.tertiary{
+        color:#333333;
+        background: #E5F4EE;
+    }
+  }
+
+// ==========================================================================
+// mol-spotliht theme
+// ==========================================================================
+  .grid-spotlight{
+    background: map-get(map-get($colors,grayscale), white);
+  }
+  .title-spotlight, .label-spotlight, .title-spotlight2{
+    font-family:  $fontFamilyBrand;
+    font-style: normal;
+    text-align: initial;
+    color: map-get(map-get($colors,grayscale),black);
+    padding-left: 16px;
+  }
+
+  .leimotiv-vertical{
+    color: map-get(map-get($colors,grayscale),gray-4);
+    &.bienestar{
+      color: map-get(map-get($colors,bienestar),dark);
+    }
+    &.movilidad{
+      color: map-get(map-get($colors,movilidad),dark);
+    }
+    &.hogar{
+      color: map-get(map-get($colors,hogar),dark);
+  }}
+
+  .leimotiv-horizontal{
+    color: map-get(map-get($colors,grayscale),gray-4);
+    &.bienestar{
+      color: map-get(map-get($colors,bienestar),dark);
+    }
+    &.movilidad{
+      color: map-get(map-get($colors,movilidad),dark);
+    }
+    &.hogar{
+      color: map-get(map-get($colors,hogar),dark);
+  }}
+
+  .hr{
+    background: map-get(map-get($colors,primary),base);
+    &.bienestar{
+      background-color: map-get(map-get($colors,bienestar),accento);
+    }
+    &.movilidad{
+      background-color: map-get(map-get($colors,movilidad),dark);
+    }
+    &.hogar{
+      background-color: map-get(map-get($colors,hogar),accento);
+    }
+  }
+
+

@@ -1,2 +1,16 @@
-<button class="btn primary" *ngIf="isPrimary" primary>{{ texto }}</button>
-<button class="btn secondary" *ngIf="isSecondary" secondary>{{ texto }}</button>
+<div class="center">
+  <button
+    [class]="'atom-button ' + custom.color"
+    [type]="custom.type"
+    [disabled]="custom.disabled"
+    (click)="sendEvent()"
+  >
+    <div *ngIf="custom.icon && custom.posicon === 'left'">
+      <em [class]="custom.icon + ' icon-awesome left'"></em>
+    </div>
+    {{ custom.label }}
+    <div *ngIf="custom.icon && custom.posicon === 'right'">
+      <em [class]="custom.icon + ' icon-awesome right'"></em>
+    </div>
+  </button>
+</div>

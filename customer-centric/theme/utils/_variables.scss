@@ -1,0 +1,124 @@
+
+@import './_default.scss';
+// ==========================================================================
+// FontStack
+// ==========================================================================
+
+$font-size         : 1rem;
+$font-family-brand : $fontFamilyBrand;
+$font-primary      : $fontPrimary;
+$font-secondary    : $fontSecondary;
+
+// ==========================================================================
+// COLORS : Eje.: background: color( primary, light );
+// ==========================================================================
+
+$colors: (
+   primary: (
+      base     : #016D38,
+      light    : #02D46F,
+      dark     : #005833
+   ),
+   secondary: (
+      base     : #FFDC5D,
+      light    : #FFF078,
+      dark     : #C9AB2A
+   ),
+   movilidad:(
+      accento  :#BF5500,
+      dark     :#FB7327,
+      medium   :#FEB269,
+      light    :#FFD089,
+      grad-v   :linear-gradient(180deg, #FFD089 8.33%, #FEB269 38.76%, #FB7327 99.91%),
+      grad-h   :linear-gradient(89.76deg, #FFD089 0.17%, #FEB269 62.35%, #FB7327 107.42%),
+      grad-r   :radial-gradient(108.27% 108.27% at 50% -3.76%, #FFD089 32.42%, #FEB269 58.78%, #FB7327 100%)
+   ),
+   hogar:(
+      accento  :#C28000,
+      dark     :#FFDC5D,
+      medium   :#FFE066,
+      light    :#FFFCA8,
+      grad-v   :linear-gradient(180deg, #FFFCA8 0.62%, #FFE066 80.73%, #FFDC5D 99.91%),
+      grad-h   :linear-gradient(89.52deg, #FFFCA8 2.29%, #FFE066 73.55%, #FFDC5D 99.54%),
+      grad-r   :radial-gradient(79.13% 95.68% at 51.79% 2.82%, #FFFCA8 0%, #FFE066 82.29%, #FFDC5D 100%)
+   ),
+   bienestar:(
+      accento  :#008E70,
+      dark     :#93DBC4,
+      medium   :#97E2CA,
+      light    :#CEECE3,
+      grad-v   :linear-gradient(180deg, #CEECE3 0.62%, #97E2CA 81.86%, #93DBC4 100%),
+      grad-h   :linear-gradient(89.92deg, #CEECE3 1.98%, #97E2CA 69.46%, #93DBC4 98.39%),
+      grad-r   :radial-gradient(79.13% 95.68% at 51.79% 2.82%, #CEECE3 35.67%, #97E2CA 74.85%, #93DBC4 100%)
+   ),
+   grayscale: (
+      black    : #1B1B1B,
+      gray-1   : #333333,
+      gray-2   : #666666,
+      gray-3   : #999999,
+      gray-4   : #CCCCCC,
+      gray-5   : #EEEEEE,
+      gray-6   : #FBFBFB,
+      white    : #FFFFFF,
+   
+   ),
+   alerts: (
+      info     : #007EFF,
+      success  : #28A745,
+      warning  : #FFC100,
+      error    : #DC3545,
+   ),
+ 
+);
+// ==========================================================================
+// WEIGHT : Eje.: font-weight: map-get($weights, "regular");
+// ==========================================================================
+
+$weights: (
+   thin     : 100,
+   xlight   : 200,
+   light    : 300,
+   regular  : 400,
+   medium   : 500,
+   semibold : 600,
+   bold     : 700,
+   xbold    : 800,
+   black    : 900
+);
+// ==========================================================================
+// SPACING : Eje.: padding: map-get($sizes, "tiny");
+// ==========================================================================
+
+$sizes: (
+   none   : 0,
+   tiny   : .5rem,    // 8px
+   tinysm  : .625rem,  // 10px
+   xsmall : .75rem,   // 12px
+   small  : .875rem,  // 14px
+   base   : 1rem,     // 16px
+   thumb  : 1.125rem, // 18px
+   mid    : 1.25rem,  // 20px
+   half   : 1.5rem,   // 24px
+   medium : 2rem,     // 32px
+   xmedium: 2.25rem,  // 36px
+   large  : 3rem,     // 48px
+   xlarge : 3.5rem,   // 56px
+   huge   : 4rem,     // 64px
+);
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+
+$breakpoints: (
+   sm  : 600px,
+   md  : 960px,
+   lg  : 1280px,
+   xl  : 1920px,
+);
+
+// ==========================================================================
+// Alignment
+// ==========================================================================
+
+$alignment: left, center, right, justify;
