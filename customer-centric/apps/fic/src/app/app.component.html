@@ -1,5 +1,12 @@
 <customer-centric-navbar />
-<router-outlet>
-  <customer-centric-button [custom]="botonIniciar" /> <br /><br />
-  <customer-centric-button />
-</router-outlet>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <customer-centric-menu-lateral />
+    </div>
+    <div class="col-10 contenido-central">
+      <router-outlet />
+    </div>
+  </div>
+</div>
+<customer-centric-footer />

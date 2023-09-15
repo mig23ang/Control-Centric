@@ -1,4 +1,4 @@
-## Componente AtomButton
+## Componente mibButton
 
 ### Instalación
 
@@ -14,7 +14,7 @@ import { ComponentsMobileLibModule } from '@path';
 ```
 
 ```html
-<atom-button></atom-button>
+<mib-button></mib-button>
 ```
 
 ##### Posibles entradas
@@ -51,20 +51,20 @@ libClick = Ejecuta una función cuando se hace clic en el componente
 const custom = {
   type?: 'submit',
   color: 'primary',
-  label: 'AtomButton',
+  label: 'mibButton',
   icon?: 'add-circle-outline',
   posicon?: 'right',
   disabled?: false
 }
 
 eventFunction() {
-  console.log('Click-AtomButton');
+  console.log('Click-mibButton');
 }
 ```
 
 ```html
- <atom-button dataQaId="bc-mundo-btn_open"
+ <mib-button 
               [custom]="custom"
               (libClick)="eventFunction()">
- </atom-button>
+ </mib-button>
 ```

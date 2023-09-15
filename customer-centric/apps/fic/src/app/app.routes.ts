@@ -1,10 +1,15 @@
 import { Route } from '@angular/router';
+import { HomeComponent } from '@customer-centric/common-ui';
 
 export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'fic',
+    redirectTo: 'inicio',
+  },
+  {
+    path: 'inicio',
+    component: HomeComponent
   },
   {
     path: 'fic',

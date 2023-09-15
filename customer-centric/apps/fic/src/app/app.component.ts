@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { exampleClientes } from '@customer-centric/jarvis';
-import { IButton } from 'libs/common-ui/src/lib/button/button.interface';
 
 @Component({
   selector: 'customer-centric-root',
@@ -9,8 +8,4 @@ import { IButton } from 'libs/common-ui/src/lib/button/button.interface';
 })
 export class AppComponent {
 
-  botonIniciar: IButton = {
-    color: 'secondary',
-    label: 'Iniciar ahy',
-  };
 }

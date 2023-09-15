@@ -24,7 +24,7 @@ $colors: (
       light    : #FFF078,
       dark     : #C9AB2A
    ),
-   movilidad:(
+   fic:(
       accento  :#BF5500,
       dark     :#FB7327,
       medium   :#FEB269,
@@ -33,7 +33,7 @@ $colors: (
       grad-h   :linear-gradient(89.76deg, #FFD089 0.17%, #FEB269 62.35%, #FB7327 107.42%),
       grad-r   :radial-gradient(108.27% 108.27% at 50% -3.76%, #FFD089 32.42%, #FEB269 58.78%, #FB7327 100%)
    ),
-   hogar:(
+   arrieros:(
       accento  :#C28000,
       dark     :#FFDC5D,
       medium   :#FFE066,
@@ -42,7 +42,7 @@ $colors: (
       grad-h   :linear-gradient(89.52deg, #FFFCA8 2.29%, #FFE066 73.55%, #FFDC5D 99.54%),
       grad-r   :radial-gradient(79.13% 95.68% at 51.79% 2.82%, #FFFCA8 0%, #FFE066 82.29%, #FFDC5D 100%)
    ),
-   bienestar:(
+   pyme:(
       accento  :#008E70,
       dark     :#93DBC4,
       medium   :#97E2CA,
@@ -60,7 +60,7 @@ $colors: (
       gray-5   : #EEEEEE,
       gray-6   : #FBFBFB,
       white    : #FFFFFF,
-   
+
    ),
    alerts: (
       info     : #007EFF,
@@ -68,7 +68,7 @@ $colors: (
       warning  : #FFC100,
       error    : #DC3545,
    ),
- 
+
 );
 // ==========================================================================
 // WEIGHT : Eje.: font-weight: map-get($weights, "regular");
