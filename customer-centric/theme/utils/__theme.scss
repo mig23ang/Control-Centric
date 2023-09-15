@@ -3,9 +3,9 @@
 @import './colors';
 
 // ==========================================================================
-// Atomo Button Theme
+// mib Button Theme
 // ==========================================================================
-.atom-button {
+.mib-button {
     min-width: 120px;
     height: 36px;
     font-family: $fontFamilyBrand;
@@ -35,12 +35,12 @@
     }
   }
 
-  // .atom-button__primary
+  // .mib-button__primary
   // {
   //   background: map-get(map-get($colors,secondary),base);
   // }
 
-  .atom-button:disabled{
+  .mib-button:disabled{
     background-color: map-get(map-get($colors,grayscale),gray-5);
     color: map-get(map-get($colors,grayscale),gray-3);
     box-shadow: none;
@@ -53,7 +53,7 @@
     }
   }
 
-  .atom-button:active{
+  .mib-button:active{
     &.primary{
       box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.16);
     }
@@ -68,7 +68,7 @@
   }
 
 // ==========================================================================
-// Atomo Button plus Theme
+// mibo Button plus Theme
 // ==========================================================================
 .btn-plus {
   background-color: map-get(map-get($colors,secondary),base);
@@ -90,7 +90,7 @@
 }
 
 // ==========================================================================
-// Atomo Header theme
+// mibo Header theme
 // ==========================================================================
 
 .color-alert{
@@ -103,7 +103,7 @@
     }
 
 // ==========================================================================
-// Atomo CheckBox
+// mibo CheckBox
 // ==========================================================================
 
 .label-checkbox {
@@ -139,7 +139,7 @@
 
 
 // ==========================================================================
-// Atomo Cards Theme
+// mibo Cards Theme
 // ==========================================================================
 
 .item-label {
@@ -154,19 +154,19 @@
 }
 
 // ==========================================================================
-// Atomo Calendario Theme
+// mibo Calendario Theme
 // ==========================================================================
 
 
-.atom-datetime-icon{
+.mib-datetime-icon{
   font-size: 24px;
   color: map-get(map-get($colors,primary),base);
   padding-right: 10px;
 }
 
-.atom-input-date-picker {
+.mib-input-date-picker {
 
-  .atom-date-picker-angular {
+  .mib-date-picker-angular {
     background-color: map-get(map-get($colors,grayscale),white);
   }
   .myDpSelector {
@@ -522,10 +522,10 @@
 }
 
 // ==========================================================================
-// atom-tag theme
+// mib-tag theme
 // ==========================================================================
 
-  .atom-tag{
+  .mib-tag{
     font-family: $fontFamilyBrand ;
     font-style: normal;
 

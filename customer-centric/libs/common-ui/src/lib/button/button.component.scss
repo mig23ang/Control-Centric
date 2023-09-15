@@ -1,4 +1,4 @@
-@import "../../../../../theme/utils/variables.scss";
+@import "../../../../../theme/utils/_theme.scss";
 
 .center {
   display: flex;
@@ -18,7 +18,7 @@
   }
 }
 
-.atom-button {
+.mib-button {
   align-items: center;
   text-align: center;
   justify-content: center;
