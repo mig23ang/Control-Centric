@@ -1,0 +1,139 @@
+@import '../../../../../../theme/utils/default';
+@import '../../../../../../theme/utils/_mixin';
+@import '../../../../../../theme/utils/colors';
+@import '../../../../../../theme/utils/__theme';
+@import '../../../../../../theme/utils/_variables';
+
+.sc-ion-input-md-h,
+.sc-ion-input-ios-h {
+  background-color: map-get(map-get($colors, grayscale), white) !important;
+  --padding-top: 0px !important;
+  --padding-bottom: 0px !important;
+}
+ion-grid.md,
+ion-grid.ios{
+  padding-bottom: 4px;
+}
+
+.input-config.md,
+.input-config.ios {
+  box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.16);
+  margin-top: 0px;
+  margin-bottom: 1px;
+  border-radius: 3px;
+  color: $grayscaleBase;
+  font-size: 16px;
+  --min-height: 0;
+  border: 2px solid transparent;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 11px;
+  --padding-bottom: 11px;
+  &.focus{
+    border: 2px solid rgba(2, 212, 111, 0.4);
+  }
+  &.error {
+    border: 2px solid var(--color-red-3);
+  }
+}
+ion-item.md,
+ion-item.ios{
+  --inner-padding-end: 0px;
+  --padding-start:0px
+}
+div#errores {
+  color: #721c24;
+  text-align: left;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: #f8d7da;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.message-span-error {
+  color: $alertsError;
+  margin-top: 2vw;
+  font-size: 14px;
+  letter-spacing: 0;
+  min-height: 46px;
+  border-radius: 3px;
+}
+
+.placeholder-red {
+  color: $alertsError;
+  font-size: 16px;
+  margin-left: 1px;
+}
+
+.error-message {
+  margin-bottom: 10px;
+  margin-left: 1px;
+}
+
+.placeholder-login {
+  color: map-get(map-get($colors, primary), base);
+  font-size: 16px;
+  margin-left: 1px;
+}
+.icon-input{
+  font-size: 24px;
+}
+
+.icon-input-error{
+  color: $alertsError;
+  font-size: 24px;
+}
+
+.atom-text-input__label {
+  padding-bottom: 4px;
+  display: block;
+  color: map-get(map-get($colors, primary), base);
+  font-size: 1rem;
+  overflow: visible !important;
+}
+
+.atom-text-error__label {
+  padding-bottom: 4px;
+  display: block;
+  color: $alertsError;
+  font-size: 1rem;
+  overflow: visible;
+}
+
+
+.atom-text-input__caption-text{
+  position: absolute;
+  padding-bottom: 4px;
+  display: block;
+  font-size: 14px;
+  overflow: visible !important;
+}
+
+
+.atom-text-input__caption {
+  @extend .atom-text-input__caption-text;
+  color: map-get(map-get($colors,grayscale),gray-2);
+}
+.atom-text-success__caption {
+  @extend .atom-text-input__caption-text;
+  color: map-get(map-get($colors, primary), base);
+}
+.atom-text-error__caption {
+  @extend .atom-text-input__caption-text;
+  color: $alertsError;
+}
+.caption{
+  margin-bottom: 4px;
+}
+
+.red-border-class {
+  border: 1px solid map-get(map-get($colors, alerts), error);
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.16);
+  min-height: 46px;
+}
